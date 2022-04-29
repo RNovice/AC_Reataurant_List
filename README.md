@@ -25,9 +25,9 @@
 &nbsp;
 ## **環境建置與需求**
 
-* [Node.js](https://nodejs.org/en/) - v 16. 14. 2
-* [express](https://www.npmjs.com/package/express) - v 4. 18 .0
-* [express-handlebars](https://www.npmjs.com/package/express-handlebars) - v 6. 0. 5
+* [Node.js](https://nodejs.org/en/) - v 16.14.2
+* [express](https://www.npmjs.com/package/express) - v 4.18.0
+* [express-handlebars](https://www.npmjs.com/package/express-handlebars) - v 6.0.5
 
 &nbsp;
 ## **安裝與執行步驟**
@@ -71,4 +71,4 @@ Express is listening on http://localhost:3000
 &nbsp;
 ## **專案畫面**
 
-![專案畫面](./public/img/restaurantList.gif)
+![專案畫面](./public/img/restaurantList.png)
