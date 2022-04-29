@@ -18,6 +18,23 @@ app.get('/restaurants/:restaurant_id', (req, res) => {
     res.render('show',{ restaurant })
 })
 
+app.get('/search', (req, res)  => {
+    const keyword = [
+        ...(restaurantList.results.filter( 
+            rtr => rtr.name.toLowerCase().includes(req.query.keyword.toLowerCase()))),
+        ...(restaurantList.results.filter( 
+            rtr => rtr.name_en.toLocaleLowerCase().includes(req.query.keyword.toLowerCase()))),
+        ...(restaurantList.results.filter( 
+            rtr => rtr.category.includes(req.query.keyword)))
+    ]
+
+    const filteredSearchResults = keyword.filter((item,index,arr)=>{
+        return arr.indexOf(item) === index
+    })
+
+    res.render('index', { restaurants : filteredSearchResults, keyword : req.query.keyword })
+})
+
 app.listen(port, () =>{
     console.log(`Express is listening on http://localhost:${port}`)
 })
